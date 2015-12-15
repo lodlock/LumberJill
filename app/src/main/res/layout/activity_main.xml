@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.testfunction.lumberjillexample.MainActivity"
+    >
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:text="@string/title_logs"
+        />
+
+    <Button
+        android:id="@+id/button_send_verbose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_header"
+        android:text="@string/log_verbose"
+        />
+
+    <Button
+        android:id="@+id/button_send_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_verbose"
+        android:text="@string/log_debug"
+        />
+
+    <Button
+        android:id="@+id/button_send_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_debug"
+        android:text="@string/log_info"
+        />
+
+    <Button
+        android:id="@+id/button_send_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_info"
+        android:text="@string/log_warn"
+        />
+
+    <Button
+        android:id="@+id/button_send_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_warn"
+        android:text="@string/log_error"
+        />
+
+    <Button
+        android:id="@+id/button_send_wtf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_error"
+        android:text="@string/log_wtf"
+        />
+
+    <Button
+        android:id="@+id/button_send_exception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send_wtf"
+        android:text="@string/log_exception"
+        />
+
+</RelativeLayout>

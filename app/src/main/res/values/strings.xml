@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LumberJillExample</string>
+    <string name="title_logs">Log tests with calling info</string>
+    <string name="log_verbose">Log String[] to Verbose</string>
+    <string name="log_debug">Log Debug from method</string>
+    <string name="log_info">Log int[] to Info</string>
+    <string name="log_warn">Log Warn from internal implementation</string>
+    <string name="log_error">Log int[][] Error</string>
+    <string name="log_wtf">Log View to WTF using objectToString</string>
+    <string name="log_exception">Log Exception</string>
+
+</resources>
