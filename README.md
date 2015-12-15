@@ -13,6 +13,8 @@ LumberJill is a logging Utility library for Android. Whenever LumberJill is used
   * method
   * line number
   
+![](https://github.com/lodlock/LumberJill/blob/master/images/lumberjill_debug_from_method.png "LumberJill debug from method")  
+  
 In order to use this library you need to provide a class that implements LumberJillCallbacks. 
 
 I recommend creating a class which both extends and implements adding for easier and faster access.
@@ -91,3 +93,4 @@ L.d(new String[]{"item one", "item two"});
 L.d(new int[][]{new int[]{0,1,2}, new int[]{3,4,5}});
 ```
 
+![](https://github.com/lodlock/LumberJill/blob/master/images/lumberjill_error_multidimensional_primitive_array.png "LumberJill multidimensional primitive array logged to error")
