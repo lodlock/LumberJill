@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'lumber-jill'
+
+    publishedGroupId = 'com.testfunction'
+    libraryName = 'LumberJill'
+    artifact = 'lumberjill'
+
+    libraryDescription = 'An Android logcat Utility class that formats log calls returning the file, class, method, and line numbers for both the log call itself as well as its caller.'
+
+    siteUrl = 'https://github.com/lodlock/LumberJill'
+    gitUrl = 'https://github.com/lodlock/LumberJill.git'
+
+    libraryVersion = '0.8.5'
+
+    developerId = 'lodlock'
+    developerName = 'Brandon Andrews'
+    developerEmail = 'iamhunted@gmail.com'
+
+    licenseName = 'MIT'
+    licenseUrl = 'http://opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -8,7 +32,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "0.8.5"
     }
     buildTypes {
         release {
@@ -23,3 +47,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
+
+apply from: "$rootProject.projectDir/install.gradle"
+apply from: "$rootProject.projectDir/bintray.gradle"

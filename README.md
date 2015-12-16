@@ -14,12 +14,21 @@ LumberJill is a logging Utility library for Android. Whenever LumberJill is used
   * line number
   
 ![](https://github.com/lodlock/LumberJill/blob/master/images/lumberjill_debug_from_method.png "LumberJill debug from method")  
+
+###Installation
+Add the following to your module's build.gradle file.
+```
+compile 'com.testfunction:lumberjill:0.8.5'
+```
   
+
+###Implementation
 In order to use this library you need to provide a class that implements LumberJillCallbacks. 
 
-I recommend creating a class which both extends and implements adding for easier and faster access.
+####Create a class which implements LumberJillCallbacks
+I recommend creating a class which both extends and implements adding for easier and faster access but this is not necessary.
 
-```
+```java
 public class L extends LumberJill implements LumberJillCallbacks {
 
     @Override
@@ -43,9 +52,23 @@ public class L extends LumberJill implements LumberJillCallbacks {
 }
 ```
 
+**isDebugMode**
+`isDebugMode()` this is used to enable or disable logging functionality. I recommend returning `BuildConfig.DEBUG`. 
+This ensures that no logging calls are made when the app is compiled in production mode.
+
+**getDefaultDepth**
+`getDefaultDepth()` is the default element in the stack trace. 
+In most situations **5** is what you want though if you find that LumberJill is returning the wrong line number then you are likely getting the wrong element
+ in the stack so try adjusting this value until you arrive at the desired elements.
+
+**objectToString**
+`objectToString(Object object)` allows you to create your own custom handlers for objects of a specific type not natively handled  by the library. The above sample
+returns the int id of a View object while the example code in the repo returns the reference name of the View. It is perfectly safe to return null. 
+
+####Initiate LumberJill in Application
 Extend any variant of Application class and in the onCreate pass the class which implements LumberJillCallbacks to LumberJill.init.
 
-```
+```java
 public class ExampleApplication extends Application {
 
     @Override
@@ -71,7 +94,7 @@ e(Object) | Log to error
 wtf(Object) | Log to assert
 getException(Throwable) | Returns the message of the exception along with cause message if it exists
 initTrace() | Returns a string representation of the entire stack trace starting at the point this method is called
-printExceptionTraceCauses(Throwable) | recursively prints all exception causes until there are none left
+printExceptionTraceCauses(Throwable) | Recursively prints all exception causes until there are none left
 
 ###Using an extended class such as provided example L
   
