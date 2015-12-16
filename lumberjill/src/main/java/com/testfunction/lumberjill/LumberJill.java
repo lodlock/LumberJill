@@ -58,7 +58,6 @@ public class LumberJill {
             return 0;
         }
         return sendLog(buildMessage(object), V);
-//        return sendLog(buildMessage(object), V);
     }
 
     /**
