@@ -9,6 +9,7 @@ android:
 
 before_script:
   - chmod +x gradlew
+  - printf "bintray.user=lodlock\nbintray.apikey=notreal\nbintray.gpg.password=stillnotreal" > ./local.properties
 
 script:
   - ./gradlew build connectedCheck
