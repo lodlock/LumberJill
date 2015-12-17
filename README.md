@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lodlock/LumberJill.svg?branch=master)](https://travis-ci.org/lodlock/LumberJill)
+
 # LumberJill
 
 LumberJill is a logging Utility library for Android. Whenever LumberJill is used to call a log it will return:
