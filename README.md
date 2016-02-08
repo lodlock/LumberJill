@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lodlock/LumberJill.svg?branch=master)](https://travis-ci.org/lodlock/LumberJill)
+[![Build Status](https://travis-ci.org/lodlock/LumberJill.svg?branch=master)](https://travis-ci.org/lodlock/LumberJill) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-LumberJill-green.svg?style=true)](https://android-arsenal.com/details/1/3122)
 
 # LumberJill
 
